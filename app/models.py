@@ -3,12 +3,13 @@ from sqlalchemy.orm import relationship
 from .database import Base
 from datetime import datetime
 
+
 class UserAccount(Base):
     __tablename__ = "user_accounts"
     userID = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
     passwordHash = Column(String)
-    role = Column(String)  # Admin, Operator, Technician
+    role = Column(String)  # admin, operator, technician; no "consumer"
     isActive = Column(Boolean, default=True)
 
 class PowerStation(Base):
