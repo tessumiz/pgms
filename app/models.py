@@ -19,7 +19,7 @@ class PowerStation(Base):
     location = Column(String)
     maxCapacityMW = Column(Float)
     status = Column(String)
-    
+
     substations = relationship("Substation", back_populates="power_station")
 
 class Substation(Base):
