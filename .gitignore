@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+.pyrefly.json
+pgms.db
+pyproject.toml
+settings.json

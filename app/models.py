@@ -9,7 +9,7 @@ class UserAccount(Base):
     userID = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
     passwordHash = Column(String)
-    role = Column(String)  # admin, operator, technician; no "consumer"
+    role = Column(String)  # admin, operator, technician; no consumer
     isActive = Column(Boolean, default=True)
 
 class PowerStation(Base):
